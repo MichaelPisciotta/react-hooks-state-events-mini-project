@@ -5,10 +5,11 @@ function CategoryFilter() {
 
 
 function handleClick(){
-  
+  return CATEGORIES.filter(category => category !==  )
 }
 
-  const buttonsForEachCategory = CATEGORIES.map(category => <button key={} onClick={handleClick}></button>)
+  const buttonsForEachCategory = CATEGORIES.map(category => <button key={category} onClick={handleClick}></button>)
+
 
   return (
     <div className="categories">
