@@ -4,9 +4,9 @@ import { CATEGORIES } from "../data";
 function CategoryFilter() {
 
 
-function handleClick(){
-  return CATEGORIES.filter(category => category !==  )
-}
+  function handleClick(){
+    return CATEGORIES.filter(category => category !==  )
+  }
 
   const buttonsForEachCategory = CATEGORIES.map(category => <button key={category} onClick={handleClick}></button>)
 
