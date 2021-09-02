@@ -2,15 +2,17 @@ import React from "react";
 import task from "./Task"
 
 
-function CategoryFilter({CATEGORIES}) {
+function CategoryFilter({categories, setFilter}) {
 
 
-  function handleClick(){
-    console.log("filter button clicked")
-    // return CATEGORIES.filter((category) => category === task.category )
+  function handleClick(category){
+      setFilter(category)
+   
   }
 
-  const buttonsForEachCategory = CATEGORIES.map(category => <button key={category} onClick={handleClick}>{category}</button>)
+  const buttonsForEachCategory = categories.map(category => <button key={category} 
+    onClick={() => {handleClick(category)} 
+  }>{category}</button>)
 
 
   return (
